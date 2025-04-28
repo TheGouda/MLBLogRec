@@ -1,0 +1,14 @@
+I want to make a website for ML blogsite only stricting the Tech stack to bootstrap/html/css/js. Make sure use only those tech.
+
+Requirements :
+
+1) The main homepage of the site should have a top navbar which should be static, Having the site name on the left side of the navbar, and additional things like contact,about,gallery on the right side of the navbar.
+2) This homepage should contain multiple box contents which has image in the box, underneath it should be a title for the box, and below it a 2-3 line description. Divide the page into parts of your choice, but each part should have a box content with above conditions. Also the title of the each box content should be clickable, when clicked, it should go to the other page which contains the in-depth content of the title.
+3) Now, for the depth box content there should be a hamburger icon in the left top corner; when clicked, it should open a side navbar.
+4) The navbar should have a title saying "Topics", under which there should be the topics and subtopics underneath the topic, and then when I click the topic, a list of subtopics should also populate and collapse when I click on the topic name again.
+5) The navbar should be scrollable, as there are many topics to insert. Remember, the page shouldn't get scrolled when I scroll the navbar; only the navbar should be scrolled.
+6) Also, the navbar should get closed whenever I click anywhere on the screen or on the hamburger icon.
+7) Coming to the main content of the page, make the content visible on the left-hand side when the navbar is closed, and when the navbar is opened, it should auto-adjust to the screen so that the navbar shouldn't overlap the main content of the page. Also, the hamburger icon should also not overlap the content of the page when open/close.
+8) Now, for the content, the content should have paragraphs along with image right beneath it, remember that all the images in the page should be of same size in terms of appearance, when I insert a image, the image should not be cropped, instead the image should be zoom in/out accordingly to the defined size in the page. 
+9) For the first image div, make the div such that, the image should be on the left side of the div and right side there should be some content. Also, see that the image should auto increase/decrease its size based on the right hand side text/paragraph content.
+10) Make sure, every topic and subtopic has a desired content for it, so when I click any topic/subtopic, the desired content should auto populate on the content space.
