@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Content - ML Insights</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h4>Topics</h4>
+        </div>
+        <ul class="topic-list">
+            <!-- Neural Networks -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="neural-networks">
+                    <i class="fas fa-network-wired me-2"></i>
+                    Neural Networks
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="feedforward-networks">Feedforward Networks</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="convolutional-networks">Convolutional Networks</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="recurrent-networks">Recurrent Networks</a></li>
+                </ul>
+            </li>
+            
+            <!-- Deep Learning -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="deep-learning">
+                    <i class="fas fa-brain me-2"></i>
+                    Deep Learning
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="backpropagation">Backpropagation</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="optimization-algorithms">Optimization Algorithms</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="regularization-techniques">Regularization Techniques</a></li>
+                </ul>
+            </li>
+            
+            <!-- Reinforcement Learning -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="reinforcement-learning">
+                    <i class="fas fa-gamepad me-2"></i>
+                    Reinforcement Learning
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="q-learning">Q-Learning</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="policy-gradients">Policy Gradients</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="deep-reinforcement-learning">Deep Reinforcement Learning</a></li>
+                </ul>
+            </li>
+            
+            <!-- Computer Vision -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="computer-vision">
+                    <i class="fas fa-eye me-2"></i>
+                    Computer Vision
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="image-classification">Image Classification</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="object-detection">Object Detection</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="semantic-segmentation">Semantic Segmentation</a></li>
+                </ul>
+            </li>
+            
+            <!-- Natural Language Processing -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="nlp">
+                    <i class="fas fa-language me-2"></i>
+                    Natural Language Processing
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="word-embeddings">Word Embeddings</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="language-models">Language Models</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="transformers">Transformers</a></li>
+                </ul>
+            </li>
+            
+            <!-- Generative AI -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="generative-ai">
+                    <i class="fas fa-magic me-2"></i>
+                    Generative AI
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="gans">Generative Adversarial Networks</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="diffusion-models">Diffusion Models</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="vae">Variational Autoencoders</a></li>
+                </ul>
+            </li>
+            
+            <!-- Time Series Analysis -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="time-series">
+                    <i class="fas fa-chart-line me-2"></i>
+                    Time Series Analysis
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="forecasting">Forecasting Methods</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="anomaly-detection">Anomaly Detection</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="lstm-time-series">LSTM for Time Series</a></li>
+                </ul>
+            </li>
+            
+            <!-- Ethical AI -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="ethical-ai">
+                    <i class="fas fa-balance-scale me-2"></i>
+                    Ethical AI
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="fairness">Fairness</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="interpretability">Interpretability</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="privacy">Privacy & Security</a></li>
+                </ul>
+            </li>
+            
+            <!-- Transfer Learning -->
+            <li class="topic-item">
+                <a href="#" class="topic-link" data-topic="transfer-learning">
+                    <i class="fas fa-exchange-alt me-2"></i>
+                    Transfer Learning
+                    <i class="fas fa-chevron-right ms-auto float-end mt-1"></i>
+                </a>
+                <ul class="subtopic-list">
+                    <li><a href="#" class="subtopic-link" data-subtopic="pretrained-models">Pre-trained Models</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="fine-tuning">Fine-tuning Techniques</a></li>
+                    <li><a href="#" class="subtopic-link" data-subtopic="domain-adaptation">Domain Adaptation</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Background Overlay -->
+    <div class="overlay"></div>
+    
+    <!-- Main Content Wrapper -->
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div id="content-container" class="article-container">
+                        <!-- Content will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>ML Insights</h5>
+                    <p>Your source for the latest in machine learning and artificial intelligence.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                        <li><a href="gallery.html" class="text-white">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 ML Insights. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Content Data -->
+    <script src="js/content.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
