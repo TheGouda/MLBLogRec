@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Check if we're on the content page
     if (document.querySelector('.sidebar')) {
+        // Ensure sidebar is closed initially
+        document.querySelector('.sidebar').classList.remove('active');
+        document.querySelector('.overlay').classList.remove('active');
+        document.querySelector('.content-wrapper').classList.remove('shifted');
+        if (document.querySelector('.hamburger-icon')) {
+            document.querySelector('.hamburger-icon').classList.remove('active');
+        }
+        
         setupSidebar();
     }
     
@@ -32,6 +40,16 @@ function setupSidebar() {
     // Close sidebar when clicking the overlay
     overlay.addEventListener('click', function() {
         closeSidebar();
+    });
+    
+    // Close sidebar when clicking anywhere in the document (outside the sidebar)
+    document.addEventListener('click', function(event) {
+        // Only close if sidebar is active and the click is outside the sidebar
+        if (sidebar.classList.contains('active') && 
+            !sidebar.contains(event.target) && 
+            !hamburgerIcon.contains(event.target)) {
+            closeSidebar();
+        }
     });
     
     // Setup topic and subtopic interactions
