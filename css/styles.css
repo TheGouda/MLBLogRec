@@ -298,6 +298,7 @@ body {
     color: var(--gray-color);
     margin-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -307,6 +308,7 @@ body {
 
 .article-meta span {
     margin-right: 15px;
+    margin-bottom: 5px;
 }
 
 .article-content p {
@@ -340,6 +342,234 @@ body {
 
 .featured-content {
     width: 60%;
+}
+
+/* Modern Article Styles for New Design */
+.modern-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 30px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Comparison Boxes */
+.comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.comparison-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.comparison-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comparison-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.comparison-box p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+/* Network Structure */
+.network-diagram {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.structure-components {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.component-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.component-item h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.component-item i {
+    margin-right: 8px;
+}
+
+/* Example Cards */
+.example-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.example-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    margin-right: 15px;
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.card-expandable {
+    margin-top: 15px;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 15px;
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.expandable-content p {
+    margin-bottom: 10px;
+}
+
+.expand-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--light-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.expand-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Process Steps */
+.process-steps {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.process-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
 }
 
 /* Responsive adjustments */

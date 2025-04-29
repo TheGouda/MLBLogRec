@@ -186,129 +186,297 @@ window.contentData = {
     // Feedforward Networks
     "feedforward-networks": `
         <div class="article-content">
-            <h1 class="article-title">Feedforward Neural Networks</h1>
+            <!-- Hero Section -->
+            <div class="modern-hero">
+                <div class="hero-content">
+                    <h1 class="article-title">What Are Feedforward Networks?</h1>
+                    <p class="hero-subtitle">An introduction to the fundamental building blocks of neural networks</p>
+                </div>
+                <div class="hero-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+                        <rect width="500" height="300" fill="#f8f9fa" opacity="0"/>
+                        <!-- Neural Network Robot -->
+                        <rect x="300" y="50" width="150" height="170" rx="20" ry="20" fill="#a4c5f4"/>
+                        <circle cx="340" cy="90" r="15" fill="white"/>
+                        <circle cx="410" cy="90" r="15" fill="white"/>
+                        <circle cx="345" cy="95" r="7" fill="#1a237e"/>
+                        <circle cx="405" cy="95" r="7" fill="#1a237e"/>
+                        <rect x="360" y="120" width="30" height="5" fill="#1a237e"/>
+                        <rect x="280" y="140" width="30" height="60" rx="10" ry="10" fill="#a4c5f4"/>
+                        <rect x="440" y="140" width="30" height="60" rx="10" ry="10" fill="#a4c5f4"/>
+                        <rect x="340" y="240" width="20" height="30" fill="#a4c5f4"/>
+                        <rect x="390" y="240" width="20" height="30" fill="#a4c5f4"/>
+                        <rect x="350" y="150" width="50" height="40" rx="5" ry="5" fill="#ffcc80"/>
+                        <circle cx="375" cy="50" r="10" fill="#ffcc80"/>
+                        
+                        <!-- Laptop -->
+                        <rect x="320" y="190" width="110" height="70" rx="5" ry="5" fill="#cfd8dc"/>
+                        <rect x="325" y="195" width="100" height="60" fill="white"/>
+                        <path d="M320,260 L430,260 L440,275 L310,275 Z" fill="#90a4ae"/>
+                    </svg>
+                </div>
+            </div>
+            
             <div class="article-meta">
                 <span><i class="far fa-calendar-alt"></i> April 22, 2023</span>
                 <span><i class="far fa-user"></i> Dr. Emily Johnson</span>
                 <span><i class="far fa-folder"></i> Neural Network Architectures</span>
             </div>
             
-            <p>Feedforward neural networks, also known as multilayer perceptrons (MLPs), are the most fundamental type of neural network architecture. In these networks, information flows in only one direction—forward—from the input nodes, through the hidden layers, to the output nodes, without any cycles or loops.</p>
-            
-            <div class="article-image-container">
-                <svg class="article-image" style="max-width: 500px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
-                    <rect width="500" height="300" fill="#f8f9fa"/>
+            <!-- Comparison Boxes -->
+            <div class="comparison-section">
+                <h2 class="section-title"><i class="fas fa-sync-alt"></i> Understanding Neural Networks: Two Perspectives</h2>
+                
+                <div class="comparison-container">
+                    <div class="comparison-box">
+                        <div class="comparison-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+                                <circle cx="50" cy="50" r="40" fill="#e8eaf6"/>
+                                <circle cx="50" cy="50" r="10" fill="#3f51b5"/>
+                                <circle cx="20" cy="30" r="8" fill="#7986cb"/>
+                                <circle cx="30" cy="70" r="8" fill="#7986cb"/>
+                                <circle cx="80" cy="40" r="8" fill="#7986cb"/>
+                                <line x1="28" y1="30" x2="40" y2="45" stroke="#5c6bc0" stroke-width="2"/>
+                                <line x1="38" y1="70" x2="45" y2="60" stroke="#5c6bc0" stroke-width="2"/>
+                                <line x1="60" y1="50" x2="72" y2="42" stroke="#5c6bc0" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Biological Neurons</h3>
+                        <p>In your brain, neurons receive signals through dendrites, process them in the cell body, and transmit output through axons to other neurons.</p>
+                        <p>These connections form intricate networks that enable learning through repeated exposure and feedback.</p>
+                    </div>
                     
-                    <!-- Input Layer -->
-                    <circle cx="100" cy="75" r="15" fill="#0d6efd"/>
-                    <circle cx="100" cy="150" r="15" fill="#0d6efd"/>
-                    <circle cx="100" cy="225" r="15" fill="#0d6efd"/>
-                    
-                    <!-- Hidden Layer -->
-                    <circle cx="250" cy="60" r="15" fill="#6c757d"/>
-                    <circle cx="250" cy="120" r="15" fill="#6c757d"/>
-                    <circle cx="250" cy="180" r="15" fill="#6c757d"/>
-                    <circle cx="250" cy="240" r="15" fill="#6c757d"/>
-                    
-                    <!-- Output Layer -->
-                    <circle cx="400" cy="100" r="15" fill="#198754"/>
-                    <circle cx="400" cy="200" r="15" fill="#198754"/>
-                    
-                    <!-- Connections Input to Hidden -->
-                    <line x1="115" y1="75" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="75" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="75" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="75" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <line x1="115" y1="150" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="150" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="150" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="150" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <line x1="115" y1="225" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="225" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="225" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="115" y1="225" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <!-- Connections Hidden to Output -->
-                    <line x1="265" y1="60" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="265" y1="60" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <line x1="265" y1="120" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="265" y1="120" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <line x1="265" y1="180" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="265" y1="180" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <line x1="265" y1="240" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                    <line x1="265" y1="240" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                    
-                    <!-- Labels -->
-                    <text x="100" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Input Layer</text>
-                    <text x="250" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Hidden Layer</text>
-                    <text x="400" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Output Layer</text>
-                </svg>
+                    <div class="comparison-box">
+                        <div class="comparison-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+                                <rect width="100" height="100" fill="#e3f2fd" opacity="0.7"/>
+                                <circle cx="30" cy="30" r="8" fill="#2196f3"/>
+                                <circle cx="30" cy="50" r="8" fill="#2196f3"/>
+                                <circle cx="30" cy="70" r="8" fill="#2196f3"/>
+                                
+                                <circle cx="60" cy="40" r="8" fill="#0d47a1"/>
+                                <circle cx="60" cy="60" r="8" fill="#0d47a1"/>
+                                
+                                <circle cx="85" cy="50" r="8" fill="#4caf50"/>
+                                
+                                <line x1="38" y1="30" x2="52" y2="40" stroke="#90caf9" stroke-width="2"/>
+                                <line x1="38" y1="50" x2="52" y2="40" stroke="#90caf9" stroke-width="2"/>
+                                <line x1="38" y1="50" x2="52" y2="60" stroke="#90caf9" stroke-width="2"/>
+                                <line x1="38" y1="70" x2="52" y2="60" stroke="#90caf9" stroke-width="2"/>
+                                
+                                <line x1="68" y1="40" x2="77" y2="50" stroke="#90caf9" stroke-width="2"/>
+                                <line x1="68" y1="60" x2="77" y2="50" stroke="#90caf9" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Artificial Neurons</h3>
+                        <p>In feedforward networks, artificial neurons take weighted inputs, sum them, apply an activation function, and pass the result forward to the next layer.</p>
+                        <p>Data flows in one direction only—from input to output—with no loops or cycles.</p>
+                    </div>
+                </div>
             </div>
             
-            <h2>Structure and Components</h2>
+            <!-- Network Structure -->
+            <div class="structure-section">
+                <h2 class="section-title"><i class="fas fa-project-diagram"></i> Feedforward Network Structure</h2>
+                
+                <div class="network-diagram">
+                    <svg class="article-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+                        <rect width="500" height="300" fill="#f8f9fa" opacity="0.5"/>
+                        
+                        <!-- Input Layer -->
+                        <circle cx="100" cy="75" r="15" fill="#0d6efd"/>
+                        <circle cx="100" cy="150" r="15" fill="#0d6efd"/>
+                        <circle cx="100" cy="225" r="15" fill="#0d6efd"/>
+                        
+                        <!-- Hidden Layer -->
+                        <circle cx="250" cy="60" r="15" fill="#6c757d"/>
+                        <circle cx="250" cy="120" r="15" fill="#6c757d"/>
+                        <circle cx="250" cy="180" r="15" fill="#6c757d"/>
+                        <circle cx="250" cy="240" r="15" fill="#6c757d"/>
+                        
+                        <!-- Output Layer -->
+                        <circle cx="400" cy="100" r="15" fill="#198754"/>
+                        <circle cx="400" cy="200" r="15" fill="#198754"/>
+                        
+                        <!-- Connections Input to Hidden -->
+                        <line x1="115" y1="75" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="75" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="75" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="75" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <line x1="115" y1="150" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="150" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="150" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="150" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <line x1="115" y1="225" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="225" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="225" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="115" y1="225" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <!-- Connections Hidden to Output -->
+                        <line x1="265" y1="60" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="265" y1="60" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <line x1="265" y1="120" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="265" y1="120" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <line x1="265" y1="180" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="265" y1="180" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <line x1="265" y1="240" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
+                        <line x1="265" y1="240" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
+                        
+                        <!-- Labels -->
+                        <text x="100" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Input Layer</text>
+                        <text x="250" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Hidden Layer</text>
+                        <text x="400" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Output Layer</text>
+                    </svg>
+                </div>
+                
+                <div class="structure-components">
+                    <div class="component-item">
+                        <h3><i class="fas fa-sign-in-alt"></i> Input Layer</h3>
+                        <p>Neurons that receive the initial data. Each neuron represents a feature in your dataset.</p>
+                    </div>
+                    
+                    <div class="component-item">
+                        <h3><i class="fas fa-cogs"></i> Hidden Layers</h3>
+                        <p>One or more layers that perform computations and extract features. This is where the "learning" happens.</p>
+                    </div>
+                    
+                    <div class="component-item">
+                        <h3><i class="fas fa-sign-out-alt"></i> Output Layer</h3>
+                        <p>Produces the final result or prediction, such as a classification or regression value.</p>
+                    </div>
+                    
+                    <div class="component-item">
+                        <h3><i class="fas fa-balance-scale"></i> Weights & Biases</h3>
+                        <p>Adjustable parameters that determine the strength of connections and are updated during training.</p>
+                    </div>
+                </div>
+            </div>
             
-            <p>A typical feedforward neural network consists of:</p>
+            <!-- Real-World Examples -->
+            <div class="examples-section">
+                <h2 class="section-title"><i class="fas fa-lightbulb"></i> Real-World Applications</h2>
+                
+                <div class="example-cards">
+                    <div class="example-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                    <circle cx="50" cy="50" r="40" fill="#e8f5e9"/>
+                                    <path d="M35,65 L65,65 L65,45 C65,40 60,35 50,35 C40,35 35,40 35,45 Z" fill="#66bb6a"/>
+                                    <circle cx="50" cy="30" r="10" fill="#66bb6a"/>
+                                    <rect x="45" y="65" width="10" height="15" fill="#66bb6a"/>
+                                </svg>
+                            </div>
+                            <h3>Medical Diagnosis</h3>
+                        </div>
+                        <p>Feedforward networks analyze patient data to help identify diseases from symptoms or medical images.</p>
+                        <div class="card-expandable">
+                            <div class="expandable-content">
+                                <p>For example, a network might take inputs like age, blood pressure, and test results to predict heart disease risk.</p>
+                                <p>In radiology, networks can analyze X-rays to detect pneumonia or other conditions with high accuracy.</p>
+                            </div>
+                            <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                    <circle cx="50" cy="50" r="40" fill="#e3f2fd"/>
+                                    <rect x="30" y="40" width="40" height="30" rx="2" ry="2" fill="#2196f3"/>
+                                    <rect x="35" y="45" width="30" height="20" fill="#bbdefb"/>
+                                    <circle cx="50" cy="35" r="5" fill="#2196f3"/>
+                                    <rect x="47" y="30" width="6" height="5" fill="#2196f3"/>
+                                </svg>
+                            </div>
+                            <h3>Financial Forecasting</h3>
+                        </div>
+                        <p>Networks predict stock prices, detect fraudulent transactions, and assess credit risk.</p>
+                        <div class="card-expandable">
+                            <div class="expandable-content">
+                                <p>By analyzing patterns in historical market data, these networks can identify trends that humans might miss.</p>
+                                <p>Credit scoring models use customer information to determine loan approval likelihood.</p>
+                            </div>
+                            <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                    <circle cx="50" cy="50" r="40" fill="#fff3e0"/>
+                                    <rect x="30" y="30" width="40" height="25" rx="3" ry="3" fill="#ff9800"/>
+                                    <rect x="35" y="35" width="30" height="15" fill="#ffcc80"/>
+                                    <rect x="35" y="60" width="30" height="10" fill="#ff9800"/>
+                                    <rect x="45" y="55" width="10" height="5" fill="#ff9800"/>
+                                </svg>
+                            </div>
+                            <h3>Recommendation Systems</h3>
+                        </div>
+                        <p>These networks power product recommendations on shopping sites and content suggestions on streaming platforms.</p>
+                        <div class="card-expandable">
+                            <div class="expandable-content">
+                                <p>By analyzing your past behavior and comparing it to similar users, these systems can predict what you might like next.</p>
+                                <p>This technology dramatically increases customer engagement and sales conversion rates.</p>
+                            </div>
+                            <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <ul>
-                <li><strong>Input Layer:</strong> Neurons that receive the initial data</li>
-                <li><strong>Hidden Layers:</strong> One or more layers between input and output that perform computations and feature extraction</li>
-                <li><strong>Output Layer:</strong> Produces the final result or prediction</li>
-                <li><strong>Weights and Biases:</strong> Adjustable parameters that determine the strength of connections</li>
-                <li><strong>Activation Functions:</strong> Non-linear functions that introduce complexity into the model</li>
-            </ul>
-            
-            <h2>How Feedforward Networks Process Information</h2>
-            
-            <p>The fundamental operation of a feedforward network involves:</p>
-            
-            <ol>
-                <li><strong>Forward Propagation:</strong> Input data is fed into the network, multiplied by weights, combined with biases, and passed through activation functions layer by layer.</li>
-                <li><strong>Computation at Each Neuron:</strong> Each neuron computes a weighted sum of its inputs, adds a bias term, and applies an activation function.</li>
-                <li><strong>Output Generation:</strong> The final layer produces outputs that represent the network's predictions or decisions.</li>
-            </ol>
-            
-            <h2>Training Feedforward Networks</h2>
-            
-            <p>Feedforward networks learn through a process called backpropagation, which involves:</p>
-            
-            <ol>
-                <li><strong>Forward Pass:</strong> Input data is processed through the network to generate predictions.</li>
-                <li><strong>Error Calculation:</strong> The difference between predictions and actual values is measured using a loss function.</li>
-                <li><strong>Backward Pass:</strong> The error is propagated backward through the network.</li>
-                <li><strong>Weight Updates:</strong> Network parameters are updated using gradient descent to minimize the error.</li>
-            </ol>
-            
-            <p>This iterative process continues until the network achieves satisfactory performance or meets a stopping criterion.</p>
-            
-            <h2>Applications of Feedforward Networks</h2>
-            
-            <p>Despite their simplicity compared to more complex architectures, feedforward neural networks are versatile and find applications in:</p>
-            
-            <ul>
-                <li>Classification problems (e.g., spam detection, sentiment analysis)</li>
-                <li>Regression tasks (e.g., price prediction, demand forecasting)</li>
-                <li>Pattern recognition</li>
-                <li>Feature extraction</li>
-                <li>As building blocks for more complex neural networks</li>
-            </ul>
-            
-            <h2>Limitations</h2>
-            
-            <p>While powerful, feedforward networks have some limitations:</p>
-            
-            <ul>
-                <li>They don't effectively capture sequential or spatial relationships in data</li>
-                <li>They may require large amounts of training data</li>
-                <li>They can be prone to overfitting without proper regularization</li>
-                <li>They lack memory of previous inputs, making them unsuitable for time-series data</li>
-            </ul>
-            
-            <p>Understanding feedforward neural networks provides the foundation for exploring more advanced architectures like CNNs, RNNs, and transformers, which address these limitations for specific types of data and tasks.</p>
+            <!-- How It Works -->
+            <div class="process-section">
+                <h2 class="section-title"><i class="fas fa-cog"></i> How Feedforward Networks Learn</h2>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Forward Propagation</h3>
+                        <p>Input data travels forward through the network, with each neuron applying weights, adding bias, and using an activation function.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Error Calculation</h3>
+                        <p>The network compares its output with the expected result and calculates how far off it was (the error).</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Backpropagation</h3>
+                        <p>The error signals travel backward through the network, apportioning blame to different weights.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Weight Updating</h3>
+                        <p>Weights and biases are adjusted to reduce error in future predictions, learning a bit with each example.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            function toggleExpand(button) {
+                const card = button.parentElement;
+                const content = card.querySelector('.expandable-content');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    button.textContent = "Click to expand";
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    button.textContent = "Click to collapse";
+                }
+            }
+            </script>
         </div>
     `,
     
