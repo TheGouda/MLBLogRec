@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Check if we're on the content page
     if (document.querySelector('.sidebar')) {
-        // Ensure sidebar is closed initially
+        // Ensure sidebar is closed initially - redundant but kept for safety
         document.querySelector('.sidebar').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
         document.querySelector('.content-wrapper').classList.remove('shifted');
@@ -140,9 +140,16 @@ function setupSidebar() {
     
     // Handle window resize
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 992 && sidebar.classList.contains('active')) {
+        if (sidebar.classList.contains('active')) {
+            // If sidebar is open, adjust content
             contentWrapper.classList.add('shifted');
         } else {
+            // If sidebar is closed, ensure content is full width
+            contentWrapper.classList.remove('shifted');
+        }
+        
+        // On mobile (< 992px), never shift content even if sidebar is open
+        if (window.innerWidth < 992) {
             contentWrapper.classList.remove('shifted');
         }
     });
@@ -187,7 +194,7 @@ function loadContentFromURL() {
         if (subtopicLink) {
             subtopicLink.classList.add('active');
             
-            // Expand parent topic
+            // Expand parent topic in the sidebar (but don't open sidebar)
             const parentTopic = subtopicLink.closest('.topic-item');
             if (parentTopic) {
                 const topicLink = parentTopic.querySelector('.topic-link');
@@ -211,4 +218,16 @@ function loadContentFromURL() {
         // Load default content
         loadContent('neural-networks');
     }
+    
+    // Ensure the sidebar stays closed by default, regardless of which content is loaded
+    const sidebar = document.querySelector('.sidebar');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const contentWrapper = document.querySelector('.content-wrapper');
+    const overlay = document.querySelector('.overlay');
+    
+    sidebar.classList.remove('active');
+    hamburgerIcon.classList.remove('active');
+    contentWrapper.classList.remove('shifted');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
 }

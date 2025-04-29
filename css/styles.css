@@ -260,10 +260,13 @@ body {
     margin-top: 20px;
     flex: 1 0 auto; /* This makes the content wrapper take up available space */
     min-height: calc(100vh - 200px); /* Minimum height to push footer down */
+    margin-left: 0; /* Ensure content starts at left edge by default */
+    width: 100%;
 }
 
 .content-wrapper.shifted {
     margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
 }
 
 .overlay {
