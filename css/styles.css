@@ -117,6 +117,7 @@ a:hover {
 /* Footer Styles */
 footer {
     margin-top: 50px;
+    flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
 .social-links a {
@@ -129,6 +130,17 @@ footer {
 }
 
 /* Content Page Styles */
+/* Ensure the body takes up at least the full height of the viewport */
+html, body {
+    height: 100%;
+}
+
+/* Container for the content page to ensure proper layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -246,6 +258,8 @@ footer {
     transition: margin-left var(--transition-speed);
     padding: 20px;
     margin-top: 20px;
+    flex: 1 0 auto; /* This makes the content wrapper take up available space */
+    min-height: calc(100vh - 200px); /* Minimum height to push footer down */
 }
 
 .content-wrapper.shifted {
