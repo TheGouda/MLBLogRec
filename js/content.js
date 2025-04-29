@@ -276,6 +276,9 @@ window.contentData = {
                             <div class="expandable-content">
                                 <p>These systems look for patterns like suspicious keywords, excessive punctuation, and unusual sender behavior.</p>
                                 <p>They continuously learn from new examples, adapting to evolving spam tactics.</p>
+                                <p>Modern email filters employ multiple layers of neural networks to analyze not just the content of the message, but also metadata like sending patterns, server reputation, and recipient interaction history.</p>
+                                <p>When a new email arrives, the network processes dozens of features including: sender domain age, HTML/text ratio, presence of attachments, language patterns, and even image analysis to detect text embedded in images.</p>
+                                <p>Each layer in the network specializes in different aspects of detection. Early layers might focus on basic text patterns, while deeper layers combine these signals to identify sophisticated phishing attempts that mimic legitimate messages.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
@@ -293,6 +296,16 @@ window.contentData = {
                             <div class="expandable-content">
                                 <p>By studying what you watch, how long you watch, and even when you pause, these systems build a detailed profile of your preferences.</p>
                                 <p>They compare your behavior with millions of other users to find patterns that predict what you'll want to watch next.</p>
+                                <p>Content recommendation systems use a technique called "collaborative filtering" combined with neural networks to identify hidden patterns in user behavior. These networks can process thousands of features simultaneously.</p>
+                                <p>For example, Netflix's recommendation engine tracks over 30 different signals including:</p>
+                                <ul>
+                                    <li>Time of day you typically watch certain genres</li>
+                                    <li>Devices you use for different types of content</li>
+                                    <li>How quickly you binge-watch series episodes</li>
+                                    <li>Your interaction with the platform (searches, ratings, hovering on thumbnails)</li>
+                                    <li>Actors and directors you seem to prefer</li>
+                                </ul>
+                                <p>The neural network learns to assign weights to these different factors based on how accurately they predict your satisfaction with recommended content. This creates a personalized recommendation system that continuously evolves as your viewing habits change.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
@@ -310,6 +323,14 @@ window.contentData = {
                             <div class="expandable-content">
                                 <p>The networks process data from cameras, radar, and other sensors to build a complete picture of the environment.</p>
                                 <p>They learn to respond appropriately to different situations through millions of training examples.</p>
+                                <p>Autonomous vehicles rely on multiple specialized neural networks working together, each responsible for different aspects of driving:</p>
+                                <ol>
+                                    <li><strong>Perception Networks:</strong> These identify objects in the visual field, classifying them as pedestrians, vehicles, traffic signs, lane markings, etc. These networks can detect objects in all weather and lighting conditions.</li>
+                                    <li><strong>Prediction Networks:</strong> Once objects are identified, these networks predict how they might move in the next few seconds, anticipating that a pedestrian might cross the street or a car might change lanes.</li>
+                                    <li><strong>Path Planning Networks:</strong> Based on the predictions, these networks determine the optimal trajectory for the vehicle, balancing safety, efficiency, and passenger comfort.</li>
+                                </ol>
+                                <p>Each second, an autonomous vehicle generates about 1GB of sensor data that must be processed in real-time. The neural networks are optimized to run on specialized hardware that can perform billions of operations per second while consuming minimal power.</p>
+                                <p>The training process uses both real-world driving data and simulated scenarios, particularly for rare or dangerous situations that would be risky to encounter during road testing. This combined approach allows the vehicle to handle situations it has never physically experienced.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
