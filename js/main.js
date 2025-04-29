@@ -98,16 +98,16 @@ function setupSidebar() {
     
     // Function to toggle sidebar
     function toggleSidebar() {
-        sidebar.classList.toggle('active');
-        hamburgerIcon.classList.toggle('active');
-        contentWrapper.classList.toggle('shifted');
-        overlay.classList.toggle('active');
+        const isActive = sidebar.classList.contains('active');
         
-        // Prevent body scrolling when sidebar is open
-        if (sidebar.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
+        if (isActive) {
+            closeSidebar();
         } else {
-            document.body.style.overflow = '';
+            sidebar.classList.add('active');
+            hamburgerIcon.classList.add('active');
+            contentWrapper.classList.add('shifted');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
     }
     

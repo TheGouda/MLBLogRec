@@ -353,14 +353,23 @@ window.contentData = {
                 const card = button.parentElement;
                 const content = card.querySelector('.expandable-content');
                 
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
+                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    content.style.maxHeight = '0px';
                     button.textContent = "Click to expand";
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
                     button.textContent = "Click to collapse";
                 }
             }
+            
+            // Initialize the expandable content sections
+            document.addEventListener('DOMContentLoaded', function() {
+                const expandButtons = document.querySelectorAll('.expand-button');
+                expandButtons.forEach(button => {
+                    const content = button.parentElement.querySelector('.expandable-content');
+                    content.style.maxHeight = '0px';
+                });
+            });
             </script>
         </div>
     `,
