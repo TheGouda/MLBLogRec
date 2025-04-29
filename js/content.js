@@ -193,27 +193,7 @@ window.contentData = {
                     <p class="hero-subtitle">An introduction to the fundamental building blocks of neural networks</p>
                 </div>
                 <div class="hero-image">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
-                        <rect width="500" height="300" fill="#f8f9fa" opacity="0"/>
-                        <!-- Neural Network Robot -->
-                        <rect x="300" y="50" width="150" height="170" rx="20" ry="20" fill="#a4c5f4"/>
-                        <circle cx="340" cy="90" r="15" fill="white"/>
-                        <circle cx="410" cy="90" r="15" fill="white"/>
-                        <circle cx="345" cy="95" r="7" fill="#1a237e"/>
-                        <circle cx="405" cy="95" r="7" fill="#1a237e"/>
-                        <rect x="360" y="120" width="30" height="5" fill="#1a237e"/>
-                        <rect x="280" y="140" width="30" height="60" rx="10" ry="10" fill="#a4c5f4"/>
-                        <rect x="440" y="140" width="30" height="60" rx="10" ry="10" fill="#a4c5f4"/>
-                        <rect x="340" y="240" width="20" height="30" fill="#a4c5f4"/>
-                        <rect x="390" y="240" width="20" height="30" fill="#a4c5f4"/>
-                        <rect x="350" y="150" width="50" height="40" rx="5" ry="5" fill="#ffcc80"/>
-                        <circle cx="375" cy="50" r="10" fill="#ffcc80"/>
-                        
-                        <!-- Laptop -->
-                        <rect x="320" y="190" width="110" height="70" rx="5" ry="5" fill="#cfd8dc"/>
-                        <rect x="325" y="195" width="100" height="60" fill="white"/>
-                        <path d="M320,260 L430,260 L440,275 L310,275 Z" fill="#90a4ae"/>
-                    </svg>
+                    <img src="images/pic6.png" alt="Machine learning visualization showing human and AI approaches" class="article-image">
                 </div>
             </div>
             
