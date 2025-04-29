@@ -207,8 +207,9 @@ window.contentData = {
             <div class="comparison-section">
                 <h2 class="section-title"><i class="fas fa-sync-alt"></i> Understanding Neural Networks: Two Perspectives</h2>
                 
-                <div class="comparison-container">
-                    <div class="comparison-box">
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <!-- First box -->
+                    <div class="comparison-box" style="width: 100%;">
                         <div class="comparison-icon">
                             <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="400" height="auto">
                         </div>
@@ -217,7 +218,8 @@ window.contentData = {
                         <p>The training process strengthens successful patterns and weakens unhelpful ones, gradually improving performance.</p>
                     </div>
                     
-                    <div class="comparison-box">
+                    <!-- Second box -->
+                    <div class="comparison-box" style="width: 100%;">
                         <div class="comparison-icon">
                             <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="400" height="auto">
                         </div>
