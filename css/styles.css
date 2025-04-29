@@ -526,15 +526,23 @@ body {
 
 .example-card {
     flex: 1;
-    min-width: 250px;
+    min-width: 300px; /* Increased minimum width */
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.4s ease-in-out;
     height: auto;
     display: flex;
     flex-direction: column;
+}
+
+/* Card with expanded content */
+.example-card.expanded {
+    min-width: 350px; /* Even wider when expanded */
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10;
 }
 
 .example-card:hover {
@@ -554,8 +562,9 @@ body {
 
 .card-icon img {
     width: 100%;
-    max-width: 200px;
+    max-width: 350px; /* Larger image size */
     height: auto;
+    transition: all 0.5s ease-in-out;
 }
 
 .card-header h3 {
@@ -573,37 +582,55 @@ body {
 .expandable-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-    opacity: 1;
+    transition: max-height 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000), opacity 0.4s ease-in;
+    opacity: 0;
+    transform: translateY(-10px);
+    padding: 0 5px;
 }
 
-.expandable-content[style*="none"] {
-    transition: none;
+.expandable-content.expanded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000), 
+                opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    max-height: 1000px; /* Allow plenty of space for content */
+    padding: 10px 5px;
 }
 
 .expandable-content p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444;
 }
 
 .expand-button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px 15px;
     background-color: var(--light-color);
     border: 1px solid #e0e0e0;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     text-align: center;
     color: var(--primary-color);
-    font-weight: 500;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-top: 15px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    overflow: hidden;
 }
 
 .expand-button:hover {
     background-color: #e9ecef;
     border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.expand-button:active {
+    transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -613,8 +640,15 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 12px;
-    transition: transform 0.3s ease;
+    font-size: 14px;
+    transition: transform 0.4s ease;
+    color: var(--primary-color);
+}
+
+.expand-button.expanded {
+    background-color: #f0f7ff;
+    border-color: var(--primary-color);
+    color: #0257d5;
 }
 
 .expand-button.expanded:after {

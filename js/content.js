@@ -267,7 +267,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="200" height="auto">
+                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="350" height="auto">
                             </div>
                             <h3>Email Filtering</h3>
                         </div>
