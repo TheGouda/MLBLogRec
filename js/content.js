@@ -210,47 +210,20 @@ window.contentData = {
                 <div class="comparison-container">
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
-                                <circle cx="50" cy="50" r="40" fill="#e8eaf6"/>
-                                <circle cx="50" cy="50" r="10" fill="#3f51b5"/>
-                                <circle cx="20" cy="30" r="8" fill="#7986cb"/>
-                                <circle cx="30" cy="70" r="8" fill="#7986cb"/>
-                                <circle cx="80" cy="40" r="8" fill="#7986cb"/>
-                                <line x1="28" y1="30" x2="40" y2="45" stroke="#5c6bc0" stroke-width="2"/>
-                                <line x1="38" y1="70" x2="45" y2="60" stroke="#5c6bc0" stroke-width="2"/>
-                                <line x1="60" y1="50" x2="72" y2="42" stroke="#5c6bc0" stroke-width="2"/>
-                            </svg>
+                            <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="150" height="100">
                         </div>
-                        <h3>Biological Neurons</h3>
-                        <p>In your brain, neurons receive signals through dendrites, process them in the cell body, and transmit output through axons to other neurons.</p>
-                        <p>These connections form intricate networks that enable learning through repeated exposure and feedback.</p>
+                        <h3>Learning by Example</h3>
+                        <p>Like a dog learning to "sit" through repetition and rewards, neural networks learn by seeing many examples and receiving feedback.</p>
+                        <p>The training process strengthens successful patterns and weakens unhelpful ones, gradually improving performance.</p>
                     </div>
                     
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
-                                <rect width="100" height="100" fill="#e3f2fd" opacity="0.7"/>
-                                <circle cx="30" cy="30" r="8" fill="#2196f3"/>
-                                <circle cx="30" cy="50" r="8" fill="#2196f3"/>
-                                <circle cx="30" cy="70" r="8" fill="#2196f3"/>
-                                
-                                <circle cx="60" cy="40" r="8" fill="#0d47a1"/>
-                                <circle cx="60" cy="60" r="8" fill="#0d47a1"/>
-                                
-                                <circle cx="85" cy="50" r="8" fill="#4caf50"/>
-                                
-                                <line x1="38" y1="30" x2="52" y2="40" stroke="#90caf9" stroke-width="2"/>
-                                <line x1="38" y1="50" x2="52" y2="40" stroke="#90caf9" stroke-width="2"/>
-                                <line x1="38" y1="50" x2="52" y2="60" stroke="#90caf9" stroke-width="2"/>
-                                <line x1="38" y1="70" x2="52" y2="60" stroke="#90caf9" stroke-width="2"/>
-                                
-                                <line x1="68" y1="40" x2="77" y2="50" stroke="#90caf9" stroke-width="2"/>
-                                <line x1="68" y1="60" x2="77" y2="50" stroke="#90caf9" stroke-width="2"/>
-                            </svg>
+                            <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="150" height="100">
                         </div>
-                        <h3>Artificial Neurons</h3>
-                        <p>In feedforward networks, artificial neurons take weighted inputs, sum them, apply an activation function, and pass the result forward to the next layer.</p>
-                        <p>Data flows in one direction only—from input to output—with no loops or cycles.</p>
+                        <h3>A New Programming Paradigm</h3>
+                        <p>Unlike traditional programming where humans provide explicit rules, feedforward networks learn rules from data.</p>
+                        <p>The network discovers patterns and relationships by itself, allowing it to handle complex problems that would be difficult to code manually.</p>
                     </div>
                 </div>
             </div>
@@ -260,58 +233,7 @@ window.contentData = {
                 <h2 class="section-title"><i class="fas fa-project-diagram"></i> Feedforward Network Structure</h2>
                 
                 <div class="network-diagram">
-                    <svg class="article-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
-                        <rect width="500" height="300" fill="#f8f9fa" opacity="0.5"/>
-                        
-                        <!-- Input Layer -->
-                        <circle cx="100" cy="75" r="15" fill="#0d6efd"/>
-                        <circle cx="100" cy="150" r="15" fill="#0d6efd"/>
-                        <circle cx="100" cy="225" r="15" fill="#0d6efd"/>
-                        
-                        <!-- Hidden Layer -->
-                        <circle cx="250" cy="60" r="15" fill="#6c757d"/>
-                        <circle cx="250" cy="120" r="15" fill="#6c757d"/>
-                        <circle cx="250" cy="180" r="15" fill="#6c757d"/>
-                        <circle cx="250" cy="240" r="15" fill="#6c757d"/>
-                        
-                        <!-- Output Layer -->
-                        <circle cx="400" cy="100" r="15" fill="#198754"/>
-                        <circle cx="400" cy="200" r="15" fill="#198754"/>
-                        
-                        <!-- Connections Input to Hidden -->
-                        <line x1="115" y1="75" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="75" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="75" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="75" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <line x1="115" y1="150" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="150" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="150" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="150" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <line x1="115" y1="225" x2="235" y2="60" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="225" x2="235" y2="120" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="225" x2="235" y2="180" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="115" y1="225" x2="235" y2="240" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <!-- Connections Hidden to Output -->
-                        <line x1="265" y1="60" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="265" y1="60" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <line x1="265" y1="120" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="265" y1="120" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <line x1="265" y1="180" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="265" y1="180" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <line x1="265" y1="240" x2="385" y2="100" stroke="#dee2e6" stroke-width="1.5"/>
-                        <line x1="265" y1="240" x2="385" y2="200" stroke="#dee2e6" stroke-width="1.5"/>
-                        
-                        <!-- Labels -->
-                        <text x="100" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Input Layer</text>
-                        <text x="250" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Hidden Layer</text>
-                        <text x="400" y="275" font-family="Arial" font-size="14" text-anchor="middle" fill="#212529">Output Layer</text>
-                    </svg>
+                    <img src="images/pic5.png" alt="How self-driving cars learn - neural network example" class="article-image">
                 </div>
                 
                 <div class="structure-components">
@@ -345,20 +267,15 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                    <circle cx="50" cy="50" r="40" fill="#e8f5e9"/>
-                                    <path d="M35,65 L65,65 L65,45 C65,40 60,35 50,35 C40,35 35,40 35,45 Z" fill="#66bb6a"/>
-                                    <circle cx="50" cy="30" r="10" fill="#66bb6a"/>
-                                    <rect x="45" y="65" width="10" height="15" fill="#66bb6a"/>
-                                </svg>
+                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="80" height="60">
                             </div>
-                            <h3>Medical Diagnosis</h3>
+                            <h3>Email Filtering</h3>
                         </div>
-                        <p>Feedforward networks analyze patient data to help identify diseases from symptoms or medical images.</p>
+                        <p>Feedforward networks analyze message content to identify spam and protect your inbox.</p>
                         <div class="card-expandable">
                             <div class="expandable-content">
-                                <p>For example, a network might take inputs like age, blood pressure, and test results to predict heart disease risk.</p>
-                                <p>In radiology, networks can analyze X-rays to detect pneumonia or other conditions with high accuracy.</p>
+                                <p>These systems look for patterns like suspicious keywords, excessive punctuation, and unusual sender behavior.</p>
+                                <p>They continuously learn from new examples, adapting to evolving spam tactics.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
@@ -367,21 +284,15 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                    <circle cx="50" cy="50" r="40" fill="#e3f2fd"/>
-                                    <rect x="30" y="40" width="40" height="30" rx="2" ry="2" fill="#2196f3"/>
-                                    <rect x="35" y="45" width="30" height="20" fill="#bbdefb"/>
-                                    <circle cx="50" cy="35" r="5" fill="#2196f3"/>
-                                    <rect x="47" y="30" width="6" height="5" fill="#2196f3"/>
-                                </svg>
+                                <img src="images/pic4.png" alt="Netflix recommendation system" width="80" height="60">
                             </div>
-                            <h3>Financial Forecasting</h3>
+                            <h3>Content Recommendations</h3>
                         </div>
-                        <p>Networks predict stock prices, detect fraudulent transactions, and assess credit risk.</p>
+                        <p>Networks analyze viewing habits to suggest movies and shows you're likely to enjoy.</p>
                         <div class="card-expandable">
                             <div class="expandable-content">
-                                <p>By analyzing patterns in historical market data, these networks can identify trends that humans might miss.</p>
-                                <p>Credit scoring models use customer information to determine loan approval likelihood.</p>
+                                <p>By studying what you watch, how long you watch, and even when you pause, these systems build a detailed profile of your preferences.</p>
+                                <p>They compare your behavior with millions of other users to find patterns that predict what you'll want to watch next.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
@@ -390,21 +301,15 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                    <circle cx="50" cy="50" r="40" fill="#fff3e0"/>
-                                    <rect x="30" y="30" width="40" height="25" rx="3" ry="3" fill="#ff9800"/>
-                                    <rect x="35" y="35" width="30" height="15" fill="#ffcc80"/>
-                                    <rect x="35" y="60" width="30" height="10" fill="#ff9800"/>
-                                    <rect x="45" y="55" width="10" height="5" fill="#ff9800"/>
-                                </svg>
+                                <img src="images/pic5.png" alt="Self-driving car learning" width="80" height="60">
                             </div>
-                            <h3>Recommendation Systems</h3>
+                            <h3>Autonomous Vehicles</h3>
                         </div>
-                        <p>These networks power product recommendations on shopping sites and content suggestions on streaming platforms.</p>
+                        <p>Feedforward networks help self-driving cars recognize traffic signals, pedestrians, and road conditions.</p>
                         <div class="card-expandable">
                             <div class="expandable-content">
-                                <p>By analyzing your past behavior and comparing it to similar users, these systems can predict what you might like next.</p>
-                                <p>This technology dramatically increases customer engagement and sales conversion rates.</p>
+                                <p>The networks process data from cameras, radar, and other sensors to build a complete picture of the environment.</p>
+                                <p>They learn to respond appropriately to different situations through millions of training examples.</p>
                             </div>
                             <button class="expand-button" onclick="toggleExpand(this)">Click to expand</button>
                         </div>
