@@ -210,7 +210,7 @@ window.contentData = {
                 <div class="comparison-container">
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="280" height="auto">
+                            <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="400" height="auto">
                         </div>
                         <h3>Learning by Example</h3>
                         <p>Like a dog learning to "sit" through repetition and rewards, neural networks learn by seeing many examples and receiving feedback.</p>
@@ -219,7 +219,7 @@ window.contentData = {
                     
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="280" height="auto">
+                            <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="400" height="auto">
                         </div>
                         <h3>A New Programming Paradigm</h3>
                         <p>Unlike traditional programming where humans provide explicit rules, feedforward networks learn rules from data.</p>
