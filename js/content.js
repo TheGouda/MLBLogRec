@@ -210,7 +210,7 @@ window.contentData = {
                 <div class="comparison-container">
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="150" height="100">
+                            <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="280" height="auto">
                         </div>
                         <h3>Learning by Example</h3>
                         <p>Like a dog learning to "sit" through repetition and rewards, neural networks learn by seeing many examples and receiving feedback.</p>
@@ -219,7 +219,7 @@ window.contentData = {
                     
                     <div class="comparison-box">
                         <div class="comparison-icon">
-                            <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="150" height="100">
+                            <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="280" height="auto">
                         </div>
                         <h3>A New Programming Paradigm</h3>
                         <p>Unlike traditional programming where humans provide explicit rules, feedforward networks learn rules from data.</p>
@@ -233,7 +233,7 @@ window.contentData = {
                 <h2 class="section-title"><i class="fas fa-project-diagram"></i> Feedforward Network Structure</h2>
                 
                 <div class="network-diagram">
-                    <img src="images/pic5.png" alt="How self-driving cars learn - neural network example" class="article-image">
+                    <img src="images/pic5.png" alt="How self-driving cars learn - neural network example" class="article-image" style="max-width:800px; width:100%;">
                 </div>
                 
                 <div class="structure-components">
@@ -267,7 +267,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="80" height="60">
+                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="200" height="auto">
                             </div>
                             <h3>Email Filtering</h3>
                         </div>
@@ -284,7 +284,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic4.png" alt="Netflix recommendation system" width="80" height="60">
+                                <img src="images/pic4.png" alt="Netflix recommendation system" width="200" height="auto">
                             </div>
                             <h3>Content Recommendations</h3>
                         </div>
@@ -301,7 +301,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic5.png" alt="Self-driving car learning" width="80" height="60">
+                                <img src="images/pic5.png" alt="Self-driving car learning" width="200" height="auto">
                             </div>
                             <h3>Autonomous Vehicles</h3>
                         </div>
