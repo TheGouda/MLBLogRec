@@ -287,7 +287,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic4.png" alt="Netflix recommendation system" width="200" height="auto">
+                                <img src="images/pic4.png" alt="Netflix recommendation system" width="350" height="auto">
                             </div>
                             <h3>Content Recommendations</h3>
                         </div>
@@ -314,7 +314,7 @@ window.contentData = {
                     <div class="example-card">
                         <div class="card-header">
                             <div class="card-icon">
-                                <img src="images/pic5.png" alt="Self-driving car learning" width="200" height="auto">
+                                <img src="images/pic5.png" alt="Self-driving car learning" width="350" height="auto">
                             </div>
                             <h3>Autonomous Vehicles</h3>
                         </div>
@@ -374,28 +374,68 @@ window.contentData = {
             let hasInitialized = false;
             
             function toggleExpand(button) {
-                const card = button.parentElement;
-                const content = card.querySelector('.expandable-content');
+                // Get parent elements
+                const expandableContainer = button.parentElement;
+                const content = expandableContainer.querySelector('.expandable-content');
+                const card = expandableContainer.closest('.example-card');
                 
-                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                    // Collapse content
-                    content.style.maxHeight = '0px';
+                if (content.classList.contains('expanded')) {
+                    // COLLAPSE CONTENT
+                    
+                    // 1. First update the button
                     button.textContent = "Click to expand";
                     button.classList.remove('expanded');
-                } else {
-                    // Calculate the real content height before expanding
-                    content.style.maxHeight = 'none'; // Temporarily remove height restriction
-                    const scrollHeight = content.scrollHeight;
-                    content.style.maxHeight = '0px'; // Reset it
                     
-                    // Force browser reflow
+                    // 2. Begin collapsing animation
+                    content.style.maxHeight = '0px';
+                    content.classList.remove('expanded');
+                    
+                    // 3. Remove expanded state from the card (with slight delay to let content collapse first)
+                    setTimeout(() => {
+                        card.classList.remove('expanded');
+                    }, 100);
+                    
+                } else {
+                    // EXPAND CONTENT
+                    
+                    // 1. Prepare content and card for expansion
+                    card.classList.add('expanded');
+                    
+                    // 2. Update button state immediately
+                    button.textContent = "Click to collapse";
+                    button.classList.add('expanded');
+                    
+                    // 3. Calculate proper height for animation
+                    // Temporarily set display to "none" to measure without affecting layout
+                    const originalDisplay = content.style.display;
+                    content.style.display = 'none';
+                    
+                    // Add expanded class (which applies styles but won't be visible yet)
+                    content.classList.add('expanded');
+                    
+                    // Restore display to measure the scrollHeight
+                    content.style.display = originalDisplay;
+                    
+                    // Get height measurement
+                    const targetHeight = content.scrollHeight;
+                    
+                    // Reset height before animation
+                    content.style.maxHeight = '0px';
+                    
+                    // Force a reflow to ensure the transition will work
                     void content.offsetHeight;
                     
-                    // Now animate to the full height
+                    // Now animate the height expansion
                     requestAnimationFrame(() => {
-                        content.style.maxHeight = scrollHeight + "px";
-                        button.textContent = "Click to collapse";
-                        button.classList.add('expanded');
+                        content.style.maxHeight = targetHeight + 'px';
+                        
+                        // Ensure the maxHeight is adjusted if content changes
+                        setTimeout(() => {
+                            // If the content is still expanded after animation completes
+                            if (content.classList.contains('expanded')) {
+                                content.style.maxHeight = content.scrollHeight + 'px';
+                            }
+                        }, 600); // Match transition duration
                     });
                 }
             }
@@ -410,12 +450,17 @@ window.contentData = {
                     // Remove any existing onclick to prevent duplicates
                     button.onclick = null;
                     
-                    const content = button.parentElement.querySelector('.expandable-content');
+                    // Get related elements
+                    const expandableContainer = button.parentElement;
+                    const content = expandableContainer.querySelector('.expandable-content');
+                    const card = expandableContainer.closest('.example-card');
                     
-                    // Reset to initial state
+                    // Reset everything to initial state
                     content.style.maxHeight = '0px';
+                    content.classList.remove('expanded');
                     button.textContent = "Click to expand";
                     button.classList.remove('expanded');
+                    card.classList.remove('expanded');
                     
                     // Attach click handler
                     button.addEventListener('click', function(e) {
@@ -447,14 +492,23 @@ window.contentData = {
             
             // Re-initialize when the window is resized to handle layout changes
             window.addEventListener('resize', function() {
-                const expandButtons = document.querySelectorAll('.expand-button.expanded');
-                expandButtons.forEach(button => {
-                    const content = button.parentElement.querySelector('.expandable-content');
+                // Handle expanded content height adjustment
+                const expandedContents = document.querySelectorAll('.expandable-content.expanded');
+                expandedContents.forEach(content => {
+                    // For already expanded content, adjust the height to fit new dimensions
                     if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                        // Recalculate height for expanded sections
-                        content.style.maxHeight = content.scrollHeight + "px";
+                        requestAnimationFrame(() => {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        });
                     }
                 });
+                
+                // Force recalculation with a slight delay to account for layout shifts
+                setTimeout(() => {
+                    expandedContents.forEach(content => {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    });
+                }, 300);
             });
             </script>
         </div>
