@@ -144,19 +144,21 @@ body {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -var(--sidebar-width);
+    left: -100%;  /* Start completely off-screen */
     width: var(--sidebar-width);
     height: 100%;
     background-color: var(--dark-color);
-    transition: left var(--transition-speed);
+    transition: all 0.3s ease-in-out;
     z-index: 1030;
     padding-top: 60px;
     overflow-y: auto;
     color: white;
+    box-shadow: none;
 }
 
 .sidebar.active {
     left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-header {
@@ -242,31 +244,50 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    transition: background-color var(--transition-speed);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .hamburger-icon:hover {
     background-color: #0b5ed7;
+    transform: scale(1.05);
 }
 
 .hamburger-icon.active {
-    left: calc(var(--sidebar-width) + 15px);
+    left: 15px;
     background-color: var(--gray-color);
 }
 
+@media (min-width: 992px) {
+    .hamburger-icon.active {
+        left: calc(var(--sidebar-width) - 15px);
+    }
+}
+
 .content-wrapper {
-    transition: margin-left var(--transition-speed);
+    transition: all 0.3s ease-in-out;
     padding: 20px;
-    margin-top: 20px;
+    padding-top: 60px; /* Add padding to account for the hamburger icon */
+    margin-top: 0;
     flex: 1 0 auto; /* This makes the content wrapper take up available space */
     min-height: calc(100vh - 200px); /* Minimum height to push footer down */
     margin-left: 0; /* Ensure content starts at left edge by default */
     width: 100%;
+    position: relative;
 }
 
 .content-wrapper.shifted {
     margin-left: var(--sidebar-width);
     width: calc(100% - var(--sidebar-width));
+}
+
+/* Handle content shift on mobile */
+@media (max-width: 992px) {
+    .content-wrapper.shifted {
+        margin-left: 0;
+        width: 100%;
+        opacity: 0.7; /* Dim the content when sidebar is open on mobile */
+    }
 }
 
 .overlay {
@@ -277,17 +298,22 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1020;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .overlay.active {
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@media (min-width: 992px) {
+    /* On larger screens, don't show overlay when sidebar is open */
+    .overlay.active {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Article Styles */

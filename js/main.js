@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Check if we're on the content page
     if (document.querySelector('.sidebar')) {
-        // Ensure sidebar is closed initially - redundant but kept for safety
+        // IMPORTANT: Ensure sidebar is closed initially
         document.querySelector('.sidebar').classList.remove('active');
         document.querySelector('.overlay').classList.remove('active');
         document.querySelector('.content-wrapper').classList.remove('shifted');
@@ -121,20 +121,38 @@ function setupSidebar() {
         if (isActive) {
             closeSidebar();
         } else {
+            // Open sidebar
             sidebar.classList.add('active');
             hamburgerIcon.classList.add('active');
-            contentWrapper.classList.add('shifted');
+            
+            // Only shift content on larger screens
+            if (window.innerWidth >= 992) {
+                contentWrapper.classList.add('shifted');
+            }
+            
+            // Show overlay only on mobile
             overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            
+            // Prevent scrolling on mobile when sidebar is open
+            if (window.innerWidth < 992) {
+                document.body.style.overflow = 'hidden';
+            }
         }
     }
     
     // Function to close sidebar
     function closeSidebar() {
+        // Close sidebar
         sidebar.classList.remove('active');
         hamburgerIcon.classList.remove('active');
+        
+        // Always remove shifted class (safety measure)
         contentWrapper.classList.remove('shifted');
+        
+        // Hide overlay
         overlay.classList.remove('active');
+        
+        // Restore scrolling
         document.body.style.overflow = '';
     }
     
