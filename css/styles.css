@@ -502,11 +502,15 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .example-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .card-header {
@@ -540,8 +544,12 @@ body {
 .expandable-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
     opacity: 1;
+}
+
+.expandable-content[style*="none"] {
+    transition: none;
 }
 
 .expandable-content p {

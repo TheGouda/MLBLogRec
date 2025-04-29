@@ -349,6 +349,9 @@ window.contentData = {
             </div>
 
             <script>
+            // Global variable to track if initialization has run
+            let hasInitialized = false;
+            
             function toggleExpand(button) {
                 const card = button.parentElement;
                 const content = card.querySelector('.expandable-content');
@@ -359,31 +362,57 @@ window.contentData = {
                     button.textContent = "Click to expand";
                     button.classList.remove('expanded');
                 } else {
-                    // Expand content
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    button.textContent = "Click to collapse";
-                    button.classList.add('expanded');
+                    // Calculate the real content height before expanding
+                    content.style.maxHeight = 'none'; // Temporarily remove height restriction
+                    const scrollHeight = content.scrollHeight;
+                    content.style.maxHeight = '0px'; // Reset it
+                    
+                    // Force browser reflow
+                    void content.offsetHeight;
+                    
+                    // Now animate to the full height
+                    requestAnimationFrame(() => {
+                        content.style.maxHeight = scrollHeight + "px";
+                        button.textContent = "Click to collapse";
+                        button.classList.add('expanded');
+                    });
                 }
             }
             
-            // Initialize all expandable content sections when page is loaded or content changes
+            // Initialize all expandable content sections
             function initializeExpandableContent() {
+                console.log("Initializing expandable content");
+                hasInitialized = true;
+                
                 const expandButtons = document.querySelectorAll('.expand-button');
                 expandButtons.forEach(button => {
+                    // Remove any existing onclick to prevent duplicates
+                    button.onclick = null;
+                    
                     const content = button.parentElement.querySelector('.expandable-content');
+                    
+                    // Reset to initial state
                     content.style.maxHeight = '0px';
                     button.textContent = "Click to expand";
                     button.classList.remove('expanded');
                     
-                    // Ensure the onclick handler is attached
-                    button.onclick = function() {
+                    // Attach click handler
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
                         toggleExpand(this);
-                    };
+                    });
                 });
             }
             
-            // Initialize on DOM content loaded
-            document.addEventListener('DOMContentLoaded', initializeExpandableContent);
+            // Run initialization immediately when this script loads
+            initializeExpandableContent();
+            
+            // Also initialize on DOM content loaded (for when the script loads before the DOM)
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!hasInitialized) {
+                    initializeExpandableContent();
+                }
+            });
             
             // Also initialize after content is loaded dynamically
             if (window.loadContent) {
@@ -394,6 +423,18 @@ window.contentData = {
                     setTimeout(initializeExpandableContent, 700);
                 };
             }
+            
+            // Re-initialize when the window is resized to handle layout changes
+            window.addEventListener('resize', function() {
+                const expandButtons = document.querySelectorAll('.expand-button.expanded');
+                expandButtons.forEach(button => {
+                    const content = button.parentElement.querySelector('.expandable-content');
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        // Recalculate height for expanded sections
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
             </script>
         </div>
     `,
