@@ -354,22 +354,46 @@ window.contentData = {
                 const content = card.querySelector('.expandable-content');
                 
                 if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    // Collapse content
                     content.style.maxHeight = '0px';
                     button.textContent = "Click to expand";
+                    button.classList.remove('expanded');
                 } else {
+                    // Expand content
                     content.style.maxHeight = content.scrollHeight + "px";
                     button.textContent = "Click to collapse";
+                    button.classList.add('expanded');
                 }
             }
             
-            // Initialize the expandable content sections
-            document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all expandable content sections when page is loaded or content changes
+            function initializeExpandableContent() {
                 const expandButtons = document.querySelectorAll('.expand-button');
                 expandButtons.forEach(button => {
                     const content = button.parentElement.querySelector('.expandable-content');
                     content.style.maxHeight = '0px';
+                    button.textContent = "Click to expand";
+                    button.classList.remove('expanded');
+                    
+                    // Ensure the onclick handler is attached
+                    button.onclick = function() {
+                        toggleExpand(this);
+                    };
                 });
-            });
+            }
+            
+            // Initialize on DOM content loaded
+            document.addEventListener('DOMContentLoaded', initializeExpandableContent);
+            
+            // Also initialize after content is loaded dynamically
+            if (window.loadContent) {
+                const originalLoadContent = window.loadContent;
+                window.loadContent = function(contentId) {
+                    originalLoadContent(contentId);
+                    // Add slight delay to ensure content is rendered
+                    setTimeout(initializeExpandableContent, 700);
+                };
+            }
             </script>
         </div>
     `,
