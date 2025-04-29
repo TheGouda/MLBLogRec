@@ -266,10 +266,10 @@ window.contentData = {
                 <div class="example-cards">
                     <div class="example-card">
                         <div class="card-header">
-                            <div class="card-icon">
-                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="350" height="auto">
-                            </div>
                             <h3>Email Filtering</h3>
+                            <div class="card-icon">
+                                <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="600" height="auto">
+                            </div>
                         </div>
                         <p>Feedforward networks analyze message content to identify spam and protect your inbox.</p>
                         <div class="card-content">
@@ -283,10 +283,10 @@ window.contentData = {
                     
                     <div class="example-card">
                         <div class="card-header">
-                            <div class="card-icon">
-                                <img src="images/pic4.png" alt="Netflix recommendation system" width="350" height="auto">
-                            </div>
                             <h3>Content Recommendations</h3>
+                            <div class="card-icon">
+                                <img src="images/pic4.png" alt="Netflix recommendation system" width="600" height="auto">
+                            </div>
                         </div>
                         <p>Networks analyze viewing habits to suggest movies and shows you're likely to enjoy.</p>
                         <div class="card-content">
@@ -307,10 +307,10 @@ window.contentData = {
                     
                     <div class="example-card">
                         <div class="card-header">
-                            <div class="card-icon">
-                                <img src="images/pic5.png" alt="Self-driving car learning" width="350" height="auto">
-                            </div>
                             <h3>Autonomous Vehicles</h3>
+                            <div class="card-icon">
+                                <img src="images/pic5.png" alt="Self-driving car learning" width="600" height="auto">
+                            </div>
                         </div>
                         <p>Feedforward networks help self-driving cars recognize traffic signals, pedestrians, and road conditions.</p>
                         <div class="card-content">
