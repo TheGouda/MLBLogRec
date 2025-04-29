@@ -433,20 +433,19 @@ body {
 /* Comparison Boxes */
 .comparison-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 30px;
     margin: 30px 0;
 }
 
 .comparison-box {
-    flex: 1;
-    min-width: 350px;
+    width: 100%;
     background-color: #fff;
     border-radius: 10px;
-    padding: 30px;
+    padding: 35px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%;
+    border: 1px solid #f0f0f0;
 }
 
 .comparison-box:hover {
@@ -479,6 +478,25 @@ body {
 .comparison-box p {
     color: var(--gray-color);
     line-height: 1.6;
+}
+
+.comparison-summary {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.comparison-summary p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.comparison-summary p:last-child {
+    margin-bottom: 0;
 }
 
 /* Network Structure */

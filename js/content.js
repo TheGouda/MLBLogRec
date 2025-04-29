@@ -226,6 +226,12 @@ window.contentData = {
                         <p>The network discovers patterns and relationships by itself, allowing it to handle complex problems that would be difficult to code manually.</p>
                     </div>
                 </div>
+                
+                <div class="comparison-summary">
+                    <p>These two perspectives capture the essence of neural networks - systems that use mathematical structures to learn patterns from data rather than following explicit programming.</p>
+                    <p>Neural networks have revolutionized machine learning by providing a framework that can adapt to complex tasks through experience. This learning approach mimics how biological neural systems process information, though at a much simpler scale.</p>
+                    <p>The power of neural networks lies in their ability to discover hidden patterns and relationships within data that would be difficult or impossible to specify through traditional programming methods. This has enabled breakthroughs in areas ranging from image recognition to natural language processing to game playing.</p>
+                </div>
             </div>
             
             <!-- Network Structure -->
