@@ -75,6 +75,10 @@ a:hover {
     transition: transform var(--transition-speed);
 }
 
+table, th, td {
+    border:1px solid black;
+}
+
 .content-box:hover {
     transform: translateY(-5px);
 }

@@ -189,11 +189,11 @@ window.contentData = {
             <!-- Hero Section -->
             <div class="modern-hero">
                 <div class="hero-content">
-                    <h1 class="article-title">What Are Feedforward Networks?</h1>
-                    <p class="hero-subtitle">An introduction to the fundamental building blocks of neural networks</p>
+                    <h1 class="article-title">💡 1.1 What Is Machine Learning?</h1>
+                    <p class="hero-subtitle">An introduction to the fundamental building blocks of Machine Learning</p>
                 </div>
                 <div class="hero-image">
-                    <img src="images/pic6.png" alt="Machine learning visualization showing human and AI approaches" class="article-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQGAyRAx0YfK_A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1713937068564?e=2147483647&v=beta&t=dDD58q1OblgWADeabvFIO6k3TzsDVaSgXAAjHubgYgo" alt="Machine learning visualization showing human and AI approaches" class="article-image">
                 </div>
             </div>
             
@@ -205,38 +205,95 @@ window.contentData = {
             
             <!-- Comparison Boxes -->
             <div class="comparison-section">
-                <h2 class="section-title"><i class="fas fa-sync-alt"></i> Understanding Neural Networks: Two Perspectives</h2>
+                <h2 class="section-title"><i class="fas fa-sync-alt"></i> Understanding Machine Learning : </h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 30px;">
                     <!-- First box -->
                     <div class="comparison-box" style="width: 100%;">
+                    <h3> “Wait… The Machine Learns?”</h3>
                         <div class="comparison-icon">
                             <img src="images/pic1.png" alt="Dog learning analogy for neural networks" width="400" height="auto">
                         </div>
-                        <h3>Learning by Example</h3>
-                        <p>Like a dog learning to "sit" through repetition and rewards, neural networks learn by seeing many examples and receiving feedback.</p>
-                        <p>The training process strengthens successful patterns and weakens unhelpful ones, gradually improving performance.</p>
+                        <!--<h3> “Wait… The Machine Learns?”</h3>-->
+                        <p>
+                            You Have a Puppy… and a Question<br><br>
+                            You just brought home an adorable puppy.
+                            Bright eyes. Wagging tail. Big energy.<br><br>
+                            <strong><i>You say: “Sit!”</i></strong> Nothing happens.<br><br>
+                            You grab a treat. Hold it above his head.
+                            He tilts his head… and then — sits. 🎉<br>
+                            You give him the treat. He’s happy.
+                            You’re thrilled. You try it again.
+                            A few tries later… he starts to get it.<br><br>
+                            <strong><i>By day three, you just say the word: “Sit.”</i></strong>
+                            And he drops like a pro.
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-summary">
+                        <p>
+                            <strong>🎯 So What Just Happened?</strong><br><br>
+                            You didn’t write a program.
+                            You didn’t give instructions like:
+                            If the human says "sit" and I’m standing, bend the knees, lower my butt to the floor.
+                            You just gave examples — and the dog learned from those.
+                            🧠 That, right there, is <strong><i>Machine Learning.</i></strong>
+                            You gave inputs (the command), feedback (the treat), and through repetition and reward, your pup learned the pattern.<br><br>
+
+                            <strong>💡 Replace "Puppy" with "Computer", and "Treat" with "Accuracy"...</strong><br><br>
+                            That’s how Machine Learning works. <br>
+                            You feed the computer lots of examples, with the right answers…
+                            And it starts learning the pattern, just like your puppy. <br><br>
+
+                            <strong>🧠 So What Is Machine Learning, Really?</strong><br><br>
+                            <i>Machine Learning (ML) is a way of making computers learn patterns from data instead of us telling them the rules.</i>
+
+
+                        </p>
                     </div>
                     
                     <!-- Second box -->
                     <div class="comparison-box" style="width: 100%;">
+                    <h3>A New Programming Paradigm</h3>
                         <div class="comparison-icon">
                             <img src="images/pic2.png" alt="Traditional programming vs machine learning" width="400" height="auto">
                         </div>
-                        <h3>A New Programming Paradigm</h3>
-                        <p>Unlike traditional programming where humans provide explicit rules, feedforward networks learn rules from data.</p>
-                        <p>The network discovers patterns and relationships by itself, allowing it to handle complex problems that would be difficult to code manually.</p>
+                        <!--<h3>A New Programming Paradigm</h3>-->
+                        <p>
+                            <strong>👨‍💻 Traditional Programming (The Old Way):</strong><br><br>
+                            Imagine you're a chef, and you tell your kitchen robot:<br><br>
+                            <i>"If the ingredient is tomato, slice it. If it’s an onion, dice it. If it’s garlic, crush it."</i><br><br>
+                            You write all the rules. The robot just follows them.<br>
+                            ➡️ Rules + Ingredients (Data) → Output<br><br>
+
+                            <strong>Machine Learning (The New Way):</strong><br><br>
+                            Now, imagine instead that you don’t write any rules.<br>
+                            You show your robot 100 videos of chefs cooking.<br>
+                            You point and say:<br><br>
+                            <i>“This is slicing.”<br>
+                            “This is dicing.”<br>
+                            “This is crushing.”</i><br><br>
+                            And then... you give it a new ingredient, and it figures out what to do — based on what it learned.<br><br>
+                            ➡️ Examples + Answers → Learns the Rules → Predicts New Output
+
+                            📌 In ML, you don’t program the solution,
+                            You train the machine to find the solution itself.
+
+
+                        </p>
                     </div>
                 </div>
                 
                 <div class="comparison-summary">
-                    <p>These two perspectives capture the essence of neural networks - systems that use mathematical structures to learn patterns from data rather than following explicit programming.</p>
-                    <p>Neural networks have revolutionized machine learning by providing a framework that can adapt to complex tasks through experience. This learning approach mimics how biological neural systems process information, though at a much simpler scale.</p>
-                    <p>The power of neural networks lies in their ability to discover hidden patterns and relationships within data that would be difficult or impossible to specify through traditional programming methods. This has enabled breakthroughs in areas ranging from image recognition to natural language processing to game playing.</p>
+                    <p>
+                        <strong>🧺 Real-World Example Time (Now with Proper Context!)</strong><br><br>
+                        Let’s not throw examples at you randomly.
+                        Let’s walk into your day, and see ML quietly working behind the scenes.
+                    </p>
                 </div>
             </div>
             
-            <!-- Network Structure -->
+            <!-- Network Structure 
             <div class="structure-section">
                 <h2 class="section-title"><i class="fas fa-project-diagram"></i> Feedforward Network Structure</h2>
                 
@@ -265,7 +322,7 @@ window.contentData = {
                         <p>Adjustable parameters that determine the strength of connections and are updated during training.</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
             
             <!-- Real-World Examples -->
             <div class="examples-section">
@@ -274,84 +331,175 @@ window.contentData = {
                 <div class="example-cards">
                     <div class="example-card">
                         <div class="card-header">
-                            <h3>Email Filtering</h3>
+                            <!--<h3>Email Filtering</h3>-->
+                            <h3>📬 1. You Check Your Email…</h3>
                             <div class="card-icon">
                                 <img src="images/pic3.png" alt="Email spam filtering by machine learning" width="600" height="auto">
                             </div>
                         </div>
-                        <p>Feedforward networks analyze message content to identify spam and protect your inbox.</p>
+                        <!--<p>Feedforward networks analyze message content to identify spam and protect your inbox.</p>-->
                         <div class="card-content">
-                            <p>These systems look for patterns like suspicious keywords, excessive punctuation, and unusual sender behavior.</p>
-                            <p>They continuously learn from new examples, adapting to evolving spam tactics.</p>
-                            <p>Modern email filters employ multiple layers of neural networks to analyze not just the content of the message, but also metadata like sending patterns, server reputation, and recipient interaction history.</p>
-                            <p>When a new email arrives, the network processes dozens of features including: sender domain age, HTML/text ratio, presence of attachments, language patterns, and even image analysis to detect text embedded in images.</p>
-                            <p>Each layer in the network specializes in different aspects of detection. Early layers might focus on basic text patterns, while deeper layers combine these signals to identify sophisticated phishing attempts that mimic legitimate messages.</p>
+                            <p>
+                                Somehow, spammy emails like:<br>
+                                “Congratulations! You won $10 million in 2 minutes!” ...never land in your inbox. Why?
+                                The email service doesn’t use hardcoded rules like if subject contains "congratulations" → spam.
+                                Nope. <strong><i>It uses Machine Learning.</strong></i>
+                                The system has been trained on millions of real emails.<br><br>
+                                It learns patterns:<br><br>
+                                •	Bad grammar<br>
+                                •	Too many exclamations<br>
+                                •	Weird links<br>
+                                •	Certain keywords<br><br>
+                                And voilà — spam filters that just get better over time.
+
+                            </p>
                         </div>
                     </div>
                     
                     <div class="example-card">
                         <div class="card-header">
-                            <h3>Content Recommendations</h3>
+                            <!--<h3>Content Recommendations</h3>-->
+                            <h3>🍿 2. You Open Netflix</h3>
                             <div class="card-icon">
                                 <img src="images/pic4.png" alt="Netflix recommendation system" width="600" height="auto">
                             </div>
                         </div>
-                        <p>Networks analyze viewing habits to suggest movies and shows you're likely to enjoy.</p>
+                        <!--<p>Networks analyze viewing habits to suggest movies and shows you're likely to enjoy.</p>-->
                         <div class="card-content">
-                            <p>By studying what you watch, how long you watch, and even when you pause, these systems build a detailed profile of your preferences.</p>
-                            <p>They compare your behavior with millions of other users to find patterns that predict what you'll want to watch next.</p>
-                            <p>Content recommendation systems use a technique called "collaborative filtering" combined with neural networks to identify hidden patterns in user behavior. These networks can process thousands of features simultaneously.</p>
-                            <p>For example, Netflix's recommendation engine tracks over 30 different signals including:</p>
-                            <ul>
-                                <li>Time of day you typically watch certain genres</li>
-                                <li>Devices you use for different types of content</li>
-                                <li>How quickly you binge-watch series episodes</li>
-                                <li>Your interaction with the platform (searches, ratings, hovering on thumbnails)</li>
-                                <li>Actors and directors you seem to prefer</li>
-                            </ul>
-                            <p>The neural network learns to assign weights to these different factors based on how accurately they predict your satisfaction with recommended content. This creates a personalized recommendation system that continuously evolves as your viewing habits change.</p>
+                            <p>
+                                You're tired. You want something good to watch.
+                                And… right there — a show that you end up loving appears on your screen.
+                                Coincidence? Nope.
+                                <strong><i>Machine Learning.</strong></i><br><br>
+                                Netflix looked at:<br><br>
+                                •	What you watched<br>
+                                •	When you watched it<br>
+                                •	What people like you are watching<br><br>
+                                It uses that data to predict what you’d enjoy next.
+                                It didn’t guess. It learned from your patterns.
+                            </p>
                         </div>
                     </div>
                     
                     <div class="example-card">
                         <div class="card-header">
-                            <h3>Autonomous Vehicles</h3>
+                            <!--<h3>Autonomous Vehicles</h3>-->
+                            <h3>🚗 3. You See a Self-Driving Car Stop at a Red Light</h3>
                             <div class="card-icon">
                                 <img src="images/pic5.png" alt="Self-driving car learning" width="600" height="auto">
                             </div>
                         </div>
-                        <p>Feedforward networks help self-driving cars recognize traffic signals, pedestrians, and road conditions.</p>
+                        <!--<p>Feedforward networks help self-driving cars recognize traffic signals, pedestrians, and road conditions.</p>-->
                         <div class="card-content">
-                            <p>The networks process data from cameras, radar, and other sensors to build a complete picture of the environment.</p>
-                            <p>They learn to respond appropriately to different situations through millions of training examples.</p>
-                            <p>Autonomous vehicles rely on multiple specialized neural networks working together, each responsible for different aspects of driving:</p>
-                            <ol>
-                                <li><strong>Perception Networks:</strong> These identify objects in the visual field, classifying them as pedestrians, vehicles, traffic signs, lane markings, etc. These networks can detect objects in all weather and lighting conditions.</li>
-                                <li><strong>Prediction Networks:</strong> Once objects are identified, these networks predict how they might move in the next few seconds, anticipating that a pedestrian might cross the street or a car might change lanes.</li>
-                                <li><strong>Path Planning Networks:</strong> Based on the predictions, these networks determine the optimal trajectory for the vehicle, balancing safety, efficiency, and passenger comfort.</li>
-                            </ol>
-                            <p>Each second, an autonomous vehicle generates about 1GB of sensor data that must be processed in real-time. The neural networks are optimized to run on specialized hardware that can perform billions of operations per second while consuming minimal power.</p>
-                            <p>The training process uses both real-world driving data and simulated scenarios, particularly for rare or dangerous situations that would be risky to encounter during road testing. This combined approach allows the vehicle to handle situations it has never physically experienced.</p>
+                            <p>
+                                It’s not magic.
+                                It’s sensors + millions of hours of driving data.<br><br>
+                                The car has learned:<br><br>
+                                •	When red → stop<br>
+                                •	When someone crosses → slow down<br>
+                                •	When roads are wet → go gently<br><br>
+                                No one told it these rules directly.
+                                It watched, drove, failed, retrained… and learned.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="comparison-section">
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <!-- First box -->
+                    <div class="comparison-box" style="width: 100%;">
+                    <h3>👵 Funny Analogy: Grandma vs. Machine Learning</h3>
+                        <div class="comparison-icon">
+                            <img src="images/pic6.png" alt="Dog learning analogy for neural networks" width="400" height="auto">
+                        </div>
+                        <!--<h3> “Wait… The Machine Learns?”</h3>-->
+                        <p>Let’s get silly (but smart).</p>
+                        <p>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Task</th>
+                                    <th>Grandma’s Method</th>
+                                    <th>ML Model’s Method</th>
+                                </tr>
+                                <tr>
+                                    <td>Identify an apple</td>
+                                    <td>“If it's red and shiny, it’s probably an apple.”</td>
+                                    <td>Learns from 10,000 labeled fruit images</td>
+                                </tr>
+                                <tr>
+                                    <td>Spot a cat/td>
+                                    <td>“Fluffy tail, triangle ears — cat!”</td>
+                                    <td>Learns from thousands of cat pictures</td>
+                                </tr>
+                                <tr>
+                                    <td>Detect spam</td>
+                                    <td>“Too many exclamation marks? Spam.”</td>
+                                    <td>Learns from millions of real spam messages</td>
+                                </tr>
+                            </table>
+
+                            Grandma makes rules. ML learns rules from examples.<br><br>
+                            And guess what? ML doesn’t get tired or distracted… (unless your GPU crashes 😅)
+
+                        </p>
+                    </div>
+                    
+                    <div class="comparison-summary">
+                        <p>
+                            <strong>🧠 Quick Recap (Because You’re Learning Fast!)</strong><br><br>
+                            •	<strong><i>Machine Learning</i></strong> = Computers learning patterns from data.<br>
+                            •	It’s not magic.</i></strong> It’s math + data + pattern-finding.<br>
+                            •	You already use ML every day (Netflix, Email, Google Maps).<br>
+                            •	It’s like training a really fast, very patient dog 🐶… that never forgets.<br><br>
+
+
+                            <strong>📎 Related Terms to Remember (But No Pressure!)</strong><br><br>
+                            •	<strong><i>Data</i></strong>: The stuff you feed your ML model.<br>
+                            •	<strong><i>Labels</i></strong>: The correct answers you show it during training.<br>
+                            •	<strong><i>Model</i></strong>: The actual “thing” that learns.<br>
+                            •	<strong><i>Training</i></strong>: Teaching the model with known examples.<br>
+                            •	<strong><i>Prediction</i></strong>: What it tries to guess after it’s trained.<br><br>
+
+                            <strong>✨ What’s Next?</strong><br><br>
             
-            <!-- How It Works -->
+                            Now that you know what ML is…<br>
+                            Next, we’ll explore why it’s worth learning — and how it’s changing your world.<br><br>
+                            <i>📍 Up Next: [1.2 Why Learn Machine Learning? →]</i>
+
+                        </p>
+                    </div>
+            </div>
+            
+            <!-- How It Works
             <div class="process-section">
                 <h2 class="section-title"><i class="fas fa-cog"></i> How Feedforward Networks Learn</h2>
                 
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-number">1</div>
-                        <h3>Forward Propagation</h3>
-                        <p>Input data travels forward through the network, with each neuron applying weights, adding bias, and using an activation function.</p>
+                        <h3>🧠 Quick Recap (Because You’re Learning Fast!)</h3>
+                        <p>
+                            •	Machine Learning = Computers learning patterns from data.<br>
+                            •	It’s not magic. It’s math + data + pattern-finding.<br>
+                            •	You already use ML every day (Netflix, Email, Google Maps).<br>
+                            •	It’s like training a really fast, very patient dog 🐶… that never forgets.<br>
+
+                        </p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">2</div>
-                        <h3>Error Calculation</h3>
-                        <p>The network compares its output with the expected result and calculates how far off it was (the error).</p>
+                        <h3>📎 Related Terms to Remember (But No Pressure!)</h3>
+                        <p>
+                            •	Data: The stuff you feed your ML model.<br>
+                            •	Labels: The correct answers you show it during training.<br>
+                            •	Model: The actual “thing” that learns.<br>
+                            •	Training: Teaching the model with known examples.<br>
+                            •	Prediction: What it tries to guess after it’s trained.<br>
+
+                        </p>
                     </div>
                     
                     <div class="process-step">
@@ -366,7 +514,7 @@ window.contentData = {
                         <p>Weights and biases are adjusted to reduce error in future predictions, learning a bit with each example.</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <script>
             // Global variable to track if initialization has run
