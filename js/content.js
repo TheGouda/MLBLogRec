@@ -1,9 +1,9 @@
 // Content Data for ML Insights Blog
 window.contentData = {
     // Neural Networks
-    "neural-networks": `
+    "machine-learning": `
         <div class="article-content">
-            <h1 class="article-title">Neural Networks</h1>
+            <h1 class="article-title">Machine Learning</h1>
             <div class="article-meta">
                 <span><i class="far fa-calendar-alt"></i> April 25, 2023</span>
                 <span><i class="far fa-user"></i> Dr. Alan Smith</span>
@@ -61,7 +61,7 @@ window.contentData = {
                     </svg>
                 </div>
                 <div class="featured-content">
-                    <h2>Understanding Neural Networks</h2>
+                    <h2>Understanding Machine Learning</h2>
                     <p>Neural networks are a cornerstone of modern machine learning, drawing inspiration from the human brain's structure and function. At their core, they consist of interconnected nodes (neurons) organized in layers, which process and transform data to recognize patterns, make predictions, and solve complex problems.</p>
                     <p>The power of neural networks lies in their ability to learn from data, adapting their internal parameters through training processes like backpropagation to improve performance over time. This adaptive learning capability enables them to tackle diverse challenges across multiple domains.</p>
                 </div>
@@ -180,11 +180,12 @@ window.contentData = {
             </ul>
             
             <p>As research in the field continues to advance, new neural network architectures and training methods are being developed, pushing the boundaries of what's possible in artificial intelligence and machine learning.</p>
+            
         </div>
     `,
     
     // Feedforward Networks
-    "feedforward-networks": `
+    "what-is-machine-learning": `
         <div class="article-content">
             <!-- Hero Section -->
             <div class="modern-hero">
@@ -429,7 +430,7 @@ window.contentData = {
                                     <td>Learns from 10,000 labeled fruit images</td>
                                 </tr>
                                 <tr>
-                                    <td>Spot a cat/td>
+                                    <td>Spot a cat</td>
                                     <td>“Fluffy tail, triangle ears — cat!”</td>
                                     <td>Learns from thousands of cat pictures</td>
                                 </tr>
