@@ -184,8 +184,8 @@ window.contentData = {
         </div>
     `,
     
-    // Feedforward Networks
-    "what-is-machine-learning": `
+    // what-is-ml
+    "what-is-ml": `
         <div class="article-content">
             <!-- Hero Section -->
             <div class="modern-hero">
@@ -198,11 +198,11 @@ window.contentData = {
                 </div>
             </div>
             
-            <div class="article-meta">
+            <!--<div class="article-meta">
                 <span><i class="far fa-calendar-alt"></i> April 22, 2023</span>
                 <span><i class="far fa-user"></i> Dr. Emily Johnson</span>
                 <span><i class="far fa-folder"></i> Neural Network Architectures</span>
-            </div>
+            </div>-->
             
             <!-- Comparison Boxes -->
             <div class="comparison-section">

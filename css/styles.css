@@ -109,12 +109,12 @@ table, th, td {
     object-fit: contain;
 }
 
-.content-link {
+.content-link-index {
     color: var(--dark-color);
     transition: color var(--transition-speed);
 }
 
-.content-link:hover {
+.content-link-index:hover {
     color: var(--primary-color);
 }
 
@@ -227,6 +227,79 @@ body {
     color: white;
     background-color: rgba(13, 110, 253, 0.5);
 }
+
+
+/* Nested Subtopic CSS */
+
+/* Nested Topic Styles  start*/
+
+.nested-topic-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nested-topic-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    font-size: 0.95rem;
+}
+
+.nested-topic-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nested-topic-link.active {
+    color: white;
+    background-color: rgba(13, 110, 253, 0.3);
+}
+
+.content-page-list {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed);
+}
+
+
+.content-page-list.show {
+    max-height: 500px;
+}
+
+.content-link {
+    display: block;
+    padding: 8px 45px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: background-color var(--transition-speed);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.content-link:before {
+    content: "•";
+    position: absolute;
+    left: 32px;
+    opacity: 0.6;
+}
+
+.content-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content-link.active {
+    color: white;
+    background-color: rgba(13, 110, 253, 0.2);
+}
+
+
+/* Nested Topic Styles end*/
 
 /* Hamburger Icon */
 .navbar-toggler {

@@ -90,6 +90,68 @@ function setupSidebar() {
     });
     
     // Setup subtopic clicks
+
+    // new code adding here
+
+
+    // Setup nested subtopic interactions
+    const nestedTopicItems = document.querySelectorAll('.nested-topic-item');
+    nestedTopicItems.forEach(item => {
+        const nestedTopicLink = item.querySelector('.nested-topic-link');
+        const contentPageList = item.querySelector('.content-page-list');
+    
+        if (nestedTopicLink && contentPageList) {
+            nestedTopicLink.addEventListener('click', function(e) {
+                e.preventDefault();
+            
+                // Toggle content page list
+                contentPageList.classList.toggle('show');
+            
+                // Toggle arrow icon
+                const arrow = this.querySelector('.fa-chevron-right');
+                if (arrow) {
+                    arrow.classList.toggle('fa-rotate-90');
+                }
+            
+
+                // Mark this nested topic as active
+                document.querySelectorAll('.nested-topic-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        }
+    });
+    
+    // Setup content page clicks
+    const contentLinks = document.querySelectorAll('.content-link');
+    contentLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all content links
+            contentLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked content link
+            this.classList.add('active');
+
+        
+            // Load content page content
+            loadContent(this.getAttribute('data-subtopic'));
+
+          
+            // Close sidebar on mobile
+            if (window.innerWidth < 992) {
+                closeSidebar();
+            }
+        });
+    });
+   
+    // Setup subtopic clicks (for backward compatibility)
+
+
+    // ending here
+
     const subtopicLinks = document.querySelectorAll('.subtopic-link');
     subtopicLinks.forEach(link => {
         link.addEventListener('click', function(e) {
